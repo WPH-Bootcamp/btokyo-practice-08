@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div
+      class="bg-white text-black dark:bg-gray-900 dark:text-white p-4 rounded min-h-screen"
+    >
+      <h1 class="text-xl font-bold">Halo, Dunia</h1>
+      <p>Ini adalah contoh konten</p>
+      <button
+        id="themeToggle"
+        class="mt-4 px-4 py-2 bg-gray-200 dark:bg-gray-700 text-black dark:text-white rounded"
+      >
+        Toggle Dark Mode
+      </button>
+    </div>
+    <button class="btn">Halo saya Button</button>
+
+    <script>
+      // Cek preferensi yang tersimpan
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark");
+      } else if (localStorage.getItem("theme") === "light") {
+        document.documentElement.classList.remove("dark");
+      } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.classList.add("dark");
+      }
+
+      // Toggle mode gelap dan simpan preferensi
+      document.getElementById("themeToggle").addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+        if (document.documentElement.classList.contains("dark")) {
+          localStorage.setItem("theme", "dark");
+        } else {
+          localStorage.setItem("theme", "light");
+        }
+      });
+    </script>
+  </body>
+</html>

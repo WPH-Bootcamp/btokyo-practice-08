@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div class="col-span-1 lg:col-span-2 bg-gray-200 p-4">Artikel Utama</div>
+      <div class="col-span-1 bg-gray-200 p-4">Sidebar Kiri</div>
+      <div class="col-span-1 bg-gray-200 p-4">Sidebar Kanan</div>
+      <div class="col-span-1 lg:col-span-2 bg-gray-200 p-4">
+        Artikel Tambahan
+      </div>
+    </div>
+    
+    <br />
+    <br />
+
+    <div class="grid grid-cols-3 gap-4">
+      <div class="bg-gray-200 p-4">Item 1</div>
+      <div class="bg-gray-200 p-4">Item 2</div>
+      <div class="col-span-2 grid grid-cols-subgrid gap-4">
+        <div class="bg-gray-200 p-4">Subitem 1</div>
+        <div class="bg-gray-200 p-4">Subitem 2</div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="@container">
+      <div class="grid grid-cols-1 @sm:grid-cols-2 @lg:grid-cols-4 gap-4">
+        <div class="bg-gray-200 p-4">Item 1</div>
+        <div class="bg-gray-200 p-4">Item 2</div>
+        <div class="bg-gray-200 p-4">Item 3</div>
+        <div class="bg-gray-200 p-4">Item 4</div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="flex flex-col md:flex-row gap-4">
+      <div class="flex-1 bg-gray-200 p-4">Kolom Kiri</div>
+      <div class="flex-1 bg-gray-200 p-4">Kolom Kanan</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- 1. BREAKPOINTS TAILWINDCSS -->
+    <div
+      class="text-base dicky:bg-red-500 sm:text-amber-600 md:text-pink-600 lg:text-emerald-600 xl:text-fuchsia-700"
+    >
+      Teks ini berubah ukuran di setiap breakpoint
+    </div>
+
+    <!-- 2. RESPONSIVE GRID DAN FLEX -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="bg-blue-500 p-4"></div>
+      <div class="bg-pink-500 p-4"></div>
+      <div class="bg-amber-500 p-4"></div>
+      <div class="bg-green-500 p-4"></div>
+    </div>
+
+    <!-- 4. ASPECT RATIO DAN RESPONSIVE IMAGE -->
+    <div class="aspect-w-16 aspect-h-9 sm:hidden">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/Tlheg5FJlw4?si=efsDPuDtztLyHRVm"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </body>
+</html>
