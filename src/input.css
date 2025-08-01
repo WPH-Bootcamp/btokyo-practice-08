@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+/* 3. CUSTOM BREAKPOINTS */
+@theme {
+  --breakpoint-dicky: 200px;
+}
+
+/* KONFIGURASI TAILWIND FORMS */
+@plugin "@tailwindcss/forms";
+
+/* CUSTOM UTILITIES */
+@layer utilities {
+  .rotate-15 {
+    transform: rotate(15deg);
+  }
+  .rotate-30 {
+    transform: rotate(30deg);
+  }
+  .rotate-60 {
+    transform: rotate(60deg);
+  }
+  .rotate-90 {
+    transform: rotate(90deg);
+  }
+}
+
+@utility no-scrollbars {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbars::-webkit-scrollbar {
+  display: none;
+}
+
+@layer components {
+  .btn-primary {
+    background-color: #1d4ed8;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s;
+  }
+
+  .btn-primary:hover {
+    background-color: #2563eb;
+  }
+
+  .btn-secondary {
+    background-color: grey;
+  }
+}
+
+/* MENERAPKAN DARK MODE */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Membuat Component Driven Design */
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3490dc;
+  --color-secondary: #ffed4a;
+  --font-base: "Inter", sans-serif;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-md;
+    background-color: #ffff00;
+    color: black;
+    transition: background-color 0.2s;
+  }
+  .btn:hover {
+    background-color: #0000ff;
+    color: white;
+  }
+}
+
+@theme {
+  --image-hero: url("../../1.jpg");
+}
